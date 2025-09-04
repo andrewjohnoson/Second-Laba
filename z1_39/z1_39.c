@@ -1,12 +1,17 @@
 #include <stdio.h>
 #include <math.h>
+#include <locale.h>
 
 int main()
 {
+    setlocale(LC_ALL, "rus");
+
     float a, b, c;
     printf("Введите три действительных числа: \n");
     scanf("%f%f%f", &a, &b, &c);
+
     int isTrue = 1;
+    
     if ((a > b || fabs(a - b) < 1e-7) &&
         (b > c || fabs(b - c) < 1e-7) &&
         (a > c || fabs(a - c) < 1e-7)) {
