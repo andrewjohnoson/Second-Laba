@@ -1,7 +1,10 @@
 #include <stdio.h>
+#include <locale.h>
 
 int main()
 {
+    setlocale(LC_ALL, "rus");
+
     char op;
 
     printf("Введите операцию, которую хотели совершить над двумя числами: \n");
